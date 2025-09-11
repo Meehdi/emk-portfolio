@@ -1,0 +1,12 @@
+{
+  "navigation": {
+    "logo": "El Mehdi KZADRI",
+    "home": "Accueil",
+    "about": "À Propos",
+    "projects": "Projets",
+    "contact": "Contact"
+  },
+  "footer": {
+    "copyright": "El Mehdi KZADRI. Tous droits réservés."
+  }
+}
