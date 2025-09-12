@@ -1,6 +1,5 @@
 @import 'tailwindcss';
 
-
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
@@ -8,6 +7,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  /* */
+  --color-section-1: var(--section-1-background);
+  --color-section-2: var(--section-2-background);
+  --color-section-3: var(--section-3-background);
+  --color-section-4: var(--section-4-background);
+  --color-section-5: var(--section-5-background);
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -45,7 +51,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(0.99 0.01 86);
+  --background: oklch(0.865 0.051 153.082);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -76,6 +82,12 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  --section-1-background: oklch(98.2% 0.018 155.826);
+  --section-2-background: oklch(98% 0.016 73.684);
+  --section-3-background: oklch(0.722 0.063 163.101);
+  --section-4-background: oklch(0.941 0.031 88.375);
+  --section-5-background: oklch(0.722 0.063 163.101);
 }
 
 .dark {
@@ -117,6 +129,77 @@
     @apply border-border outline-ring/50;
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply text-foreground min-h-screen;
+    /* Animated gradient background */
+
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+
+  /* Dark mode gradient */
+  .dark body {
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  main > div > section:first-child {
+    min-height: calc(100vh - 80px) !important;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Fade in up animation for sections */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  /* Stagger animation delays */
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+  .animate-delay-600 {
+    animation-delay: 600ms;
+  }
+
   h1 {
     @apply text-4xl font-bold tracking-tight lg:text-5xl;
   }
@@ -143,8 +226,5 @@
 
   p {
     @apply text-base;
-  }
-  body {
-    @apply bg-background text-foreground;
   }
 }

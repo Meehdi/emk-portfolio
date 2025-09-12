@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/sheet'
 import { Menu } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import Logo from '@/components/common/Logo'
 
 export default function Header() {
   const t = useTranslations('navigation')
@@ -26,24 +27,24 @@ export default function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 p-8 flex w-full border-b border-border/40 bg-background/95 backdrop-blur ">
-      <div className="container flex h-14 justify-between max-w-screen-2xl items-center">
+    <header className="fixed top-0 z-50 p-8 flex w-full border-b border-border/40 bg-background/95 backdrop-blur ">
+      <div className="container flex h-6 justify-between max-w-screen-2xl items-center">
         <div className="flex">
           <Link href="/" className="flex items-center space-x-2">
-            <h2>{t('logo')}</h2>
+            <Logo />
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center justify-between space-x-2">
-          <div className="flex items-center space-x-6 text-sm font-medium">
+          <div className="flex items-center space-x-6 text-sm font-medium ">
             {navigationItems.map(item => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
+                className="transition-colors hover:text-foreground/80 px-2 py-1 rounded-lg hover:bg-amber-200/50 text-gray-800"
               >
-                <h3>{item.label}</h3>
+                <h4>{item.label}</h4>
               </Link>
             ))}
           </div>
@@ -58,18 +59,15 @@ export default function Header() {
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-            <SheetHeader>
-              <SheetTitle>{t('logo')}</SheetTitle>
-            </SheetHeader>
-            <nav className="flex flex-col space-y-4 mt-4">
+            <nav className="flex flex-col space-y-4 mt-16 text-center">
               {navigationItems.map(item => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="transition-colors hover:text-foreground/80 text-foreground/60 block px-2 py-1"
+                  className="transition-colors hover:text-foreground/80 text-foreground/60 block px-2 py-1 hover:bg-amber-200/50"
                   onClick={() => setIsOpen(false)}
                 >
-                  <h3>{item.label}</h3>
+                  <h5>{item.label}</h5>
                 </Link>
               ))}
             </nav>

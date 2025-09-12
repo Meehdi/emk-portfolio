@@ -5,23 +5,27 @@
     "downloadCV": "Download CV",
     "contactInfo": "Contact info"
   },
-  "aboutPage": {
+  "about": {
     "title": "About Me",
-    "subtitle": "Get To Know More",
-    "values": {
-      "title": "Values",
-      "content_1": "Quality, Learning, Collaboration, Problem-solving, ReliabilityRetry"
-    },
-    "education": {
-      "title": "Values",
-      "content_1": "Engineering Degree in Computer Science",
-      "content_2": "Master's in Digital Information Engineering"
-    },
-    "experience": {
-      "title": "Experience",
-      "content_1": "8+ Years Fullstack Development",
-      "content_2": "AWS Certified Solutions Architect",
-      "content_3": "Enterprise-scale web applications"
+    "paragraph1": "I'm a passionate full-stack developer specializing in Spring Boot, Java, Kotlin, and modern frontend frameworks like React and Angular. As a continuous learner and AWS Certified Solutions Architect, I'm deeply engaged in staying up to date with emerging technologies and expanding my expertise in DevOps and SecOps practices.",
+    "paragraph2": "I thrive as an autonomous developer while cherishing collaborative teamwork and the synergy that comes from working with talented people.",
+    "highlights": {
+      "fullStack": {
+        "title": "Full-Stack Expertise",
+        "description": "Spring Boot, Java, Kotlin, React, Angular"
+      },
+      "awsCertified": {
+        "title": "AWS Certified",
+        "description": "Solutions Architect certification"
+      },
+      "continuousLearning": {
+        "title": "Continuous Learning",
+        "description": "DevOps, SecOps, emerging technologies"
+      },
+      "teamCollaboration": {
+        "title": "Team Collaboration",
+        "description": "Autonomous yet team-oriented approach"
+      }
     }
   },
   "navigation": {

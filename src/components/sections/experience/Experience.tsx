@@ -1,3 +1,5 @@
+import SectionTitle from '@/components/common/SectionTitle'
+
 interface ExperienceItem {
   title: string
   company: string
@@ -38,37 +40,33 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <section className="py-16 px-6 bg-gray-50" id="experience">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
-          Experience
-        </h2>
+    <div className="max-w-6xl mx-auto">
+      <SectionTitle title="Experience" />
 
-        <div className="grid gap-8 mt-8">
-          {experiences.map((experience, index) => (
-            <div
-              key={index}
-              className="bg-white p-8 rounded-lg shadow-lg border-l-4 border-indigo-500 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl"
-            >
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                {experience.title}
-              </h3>
+      <div className="grid gap-8 mt-8">
+        {experiences.map((experience, index) => (
+          <div
+            key={index}
+            className={`bg-white/30 backdrop-blur-sm p-8 rounded-lg shadow-lg border-l-4 border-indigo-500 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl animate-fade-in-up animate-delay-${index * 100 + 100}`}
+          >
+            <h3 className="text-xl font-semibold text-foreground mb-2">
+              {experience.title}
+            </h3>
 
-              <div className="text-indigo-500 font-bold mb-2">
-                {experience.company}
-              </div>
-
-              <div className="text-gray-500 text-sm mb-4">
-                {experience.date}
-              </div>
-
-              <p className="text-gray-600 leading-relaxed">
-                {experience.description}
-              </p>
+            <div className="text-indigo-600 font-bold mb-2">
+              {experience.company}
             </div>
-          ))}
-        </div>
+
+            <div className="text-muted-foreground text-sm mb-4">
+              {experience.date}
+            </div>
+
+            <p className="text-foreground leading-relaxed">
+              {experience.description}
+            </p>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   )
 }

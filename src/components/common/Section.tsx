@@ -1,19 +1,24 @@
-import { HTMLAttributes, ReactNode } from 'react'
-import { cn } from '@/lib/utils'
+import ScrollAnimationProvider from './ScrollAnimationProvider'
 
-type SectionProps = {
-  children: ReactNode
+interface SectionProps {
+  id: string
+  children: React.ReactNode
   className?: string
-} & HTMLAttributes<HTMLDivElement>
+}
 
 export default function Section({
-  className,
+  id,
   children,
-  ...props
+  className = '',
 }: SectionProps) {
   return (
-    <section className={cn('min-h-dvh', className)} {...props}>
-      {children}
-    </section>
+    <ScrollAnimationProvider>
+      <section
+        id={id}
+        className={`px-6 min-h-screen flex justify-center ${className}`}
+      >
+        <div className="max-w-6xl mx-auto w-full p-20">{children}</div>
+      </section>
+    </ScrollAnimationProvider>
   )
 }

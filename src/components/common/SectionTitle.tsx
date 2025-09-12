@@ -3,5 +3,5 @@ type SectionTitleProps = {
 }
 
 export default function SectionTitle({ title }: SectionTitleProps) {
-  return <h1>{title}</h1>
+  return <h1 className="text-center">{title}</h1>
 }

@@ -1,15 +1,18 @@
 'use client'
 
 import Image from 'next/image'
+import { cn } from '@/lib/utils'
 
 interface SocialIconsProps {
   githubUrl?: string
   linkedinUrl?: string
+  className?: string
 }
 
 export function SocialIcons({
   githubUrl = 'https://github.com/Meehdi',
   linkedinUrl = 'https://linkedin.com/in/elmehdikzadri',
+  className,
 }: SocialIconsProps) {
   const handleGithubClick = () => {
     window.open(githubUrl, '_blank', 'noopener,noreferrer')
@@ -20,7 +23,12 @@ export function SocialIcons({
   }
 
   return (
-    <div className="flex gap-4 items-center justify-center lg:justify-start">
+    <div
+      className={cn(
+        'flex gap-4 items-center justify-center lg:justify-start',
+        className
+      )}
+    >
       <Image
         src="/images/github.svg"
         width={40}

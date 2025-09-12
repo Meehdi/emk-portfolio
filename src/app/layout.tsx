@@ -25,13 +25,13 @@ export default function RootLayout({
 }>) {
   return (
     <html>
-      <body
-        className={`${poppins.variable} font-sans antialiased grid grid-rows-[auto_1fr_auto] `}
-      >
+      <body className={`${poppins.variable} font-sans antialiased `}>
         <NextIntlClientProvider>
-          <Header />
-          <main>{children}</main>
-          <Footer />
+          <div>
+            <Header />
+            <main className="">{children}</main>
+            <Footer />
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
