@@ -1,12 +1,37 @@
 {
+  "homePage": {
+    "name": "El Mehdi KZADRI",
+    "title": "Senior Fullstack Developer",
+    "downloadCV": "Download CV",
+    "contactInfo": "Contact info"
+  },
+  "aboutPage": {
+    "title": "About Me",
+    "subtitle": "Get To Know More",
+    "values": {
+      "title": "Values",
+      "content_1": "Quality, Learning, Collaboration, Problem-solving, ReliabilityRetry"
+    },
+    "education": {
+      "title": "Values",
+      "content_1": "Engineering Degree in Computer Science",
+      "content_2": "Master's in Digital Information Engineering"
+    },
+    "experience": {
+      "title": "Experience",
+      "content_1": "8+ Years Fullstack Development",
+      "content_2": "AWS Certified Solutions Architect",
+      "content_3": "Enterprise-scale web applications"
+    }
+  },
   "navigation": {
-    "logo": "El Mehdi KZADRI",
+    "logo": "MEEHDI",
     "home": "Home",
     "about": "About",
     "projects": "Projects",
     "contact": "Contact"
   },
   "footer": {
-    "copyright": "El Mehdi KZADRI. All rights reserved."
+    "copyright": "Copyright © 2025 El Mehdi KZADRI. All Rights Reserved."
   }
 }
