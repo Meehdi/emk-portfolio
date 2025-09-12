@@ -26,11 +26,11 @@ export default function RootLayout({
   return (
     <html>
       <body
-        className={`${poppins.variable} font-sans antialiased grid grid-rows-[auto_1fr_auto] h-dvh`}
+        className={`${poppins.variable} font-sans antialiased grid grid-rows-[auto_1fr_auto] `}
       >
         <NextIntlClientProvider>
           <Header />
-          <main className="p-16">{children}</main>
+          <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

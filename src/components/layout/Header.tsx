@@ -18,10 +18,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navigationItems = [
-    { href: '/', label: t('home') },
-    { href: '/about', label: t('about') },
-    { href: '/projects', label: t('projects') },
-    { href: '/contact', label: t('contact') },
+    { href: '#', label: t('home') },
+    { href: '#about', label: t('about') },
+    { href: '#experience', label: t('experience') },
+    { href: '#skills', label: t('skills') },
+    { href: '#contact', label: t('contact') },
   ]
 
   return (
