@@ -40,14 +40,14 @@ const experiences: ExperienceItem[] = [
 
 export default function Experience() {
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto p-6">
       <SectionTitle title="Experience" />
 
       <div className="grid gap-8 mt-8">
         {experiences.map((experience, index) => (
           <div
             key={index}
-            className={`bg-white/30 backdrop-blur-sm p-8 rounded-lg shadow-lg border-l-4 border-indigo-500 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl animate-fade-in-up animate-delay-${index * 100 + 100}`}
+            className={`bg-white/30 backdrop-blur-sm p-8 rounded-lg shadow-lg border-l-4 border-green-600 transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl animate-fade-in-up animate-delay-${index * 100 + 100}`}
           >
             <h3 className="text-xl font-semibold text-foreground mb-2">
               {experience.title}

@@ -8,9 +8,9 @@ type SectionHeaderProps = {
 
 export default function SectionHeader({ title, subtitle }: SectionHeaderProps) {
   return (
-    <div className="flex flex-col items-center justify-center">
-      <SectionSubtitle subtitle={subtitle} />
+    <div className="flex flex-col items-center justify-center gap-2">
       <SectionTitle title={title} />
+      <SectionSubtitle subtitle={subtitle} />
     </div>
   )
 }

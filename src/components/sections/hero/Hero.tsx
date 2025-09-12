@@ -2,6 +2,7 @@ import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { SocialIcons } from './SocialIcons'
+import Link from 'next/link'
 
 export default function Hero() {
   const t = useTranslations('homePage')
@@ -23,7 +24,9 @@ export default function Hero() {
 
         <div className="flex gap-4 items-center justify-center lg:justify-start">
           <Button variant="outline">{t('downloadCV')}</Button>
-          <Button variant="default">{t('contactInfo')}</Button>
+          <Link href="/#contact">
+            <Button variant="default">{t('contactInfo')}</Button>
+          </Link>
         </div>
 
         <SocialIcons />

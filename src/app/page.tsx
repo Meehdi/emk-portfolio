@@ -4,6 +4,7 @@ import Hero from '@/components/sections/hero/Hero'
 import About from '@/components/sections/about/About'
 import Experience from '@/components/sections/experience/Experience'
 import Skills from '@/components/sections/skills/Skills'
+import Contact from '@/components/sections/contact/Contact'
 
 const sections = [
   {
@@ -27,11 +28,15 @@ const sections = [
     key: 'skills',
     className: ' bg-section-2 backdrop-blur-sm  border border-white/30',
   },
+  {
+    Component: Contact,
+    key: 'contact',
+    className:
+      ' bg-section-1 backdrop-blur-sm  border border-white/30 items-center',
+  },
 ] as const
 
 export default function Home() {
-  const t = useTranslations('homePage')
-
   return (
     <div className="">
       {sections.map(({ Component, key, className }) => (
